@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,619 @@
   to {
     transform: rotate(360deg);
   }
+}
+.HOME:hover {
+  color: rgb(255, 60, 60) !important;
+}
+.CV:hover {
+  color: rgb(255, 60, 60) !important;
+}
+.CONTACT:hover {
+  color: rgb(255, 60, 60) !important;
+}
+.SERVICE:hover {
+  color: rgb(255, 60, 60) !important;
+}
+.BUTTONCV:hover {
+  background-color: rgb(255, 60, 60) !important;
+  color: white;
+}
+.BUTTONCV {
+  height: 30px;
+  border-style: none;
+  margin-top: 13px;
+  background-color: rgb(189, 187, 187);
+}
+.Navbar {
+  height: 12%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  position: relative; /* or fixed, depending on your layout */
+  z-index: 1000; /* High z-index to ensure it's on top */
+}
+.ARROW {
+  display: none;
+}
+@media only screen and (max-width: 991px) {
+  img {
+    margin-top: 0%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .GRID {
+    margin: 15px !important;
+    width: 84% !important;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .BUTTONCV {
+    height: 30px;
+    border-style: none;
+    margin-top: 13px;
+    font-size: 10px;
+    background-color: rgb(189, 187, 187);
+  }
+}
+
+@media only screen and (max-width: 559px) {
+  .ARROW {
+    display: block;
+  }
+  .BUTTONCV {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 2s, opacity 2s;
+    height: 30px;
+    border-style: none;
+    margin-top: 13px;
+    font-size: 10px;
+    color: white !important;
+    background-color: rgb(255, 80, 80);
+  }
+  .Navbar {
+    position: fixed;
+    height: 10px;
+    background-color: rgb(19 24 30);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    flex-direction: column;
+    align-items: center;
+    transition: height 2s;
+  }
+  .Navbar:hover {
+    height: 420px;
+  }
+  .nav-link {
+    visibility: hidden; /* Hide the nav-link elements in the navbar */
+    opacity: 0; /* Hide with zero opacity */
+    transition: visibility 2s, opacity 2s;
+  }
+  .Navbar:hover .nav-link {
+    visibility: visible; /* Make the nav-link elements visible when navbar is hovered */
+    opacity: 1; /* Gradually fade in the nav-link elements */
+  }
+  .Navbar:hover .BUTTONCV {
+    visibility: visible; /* Make the nav-link elements visible when navbar is hovered */
+    opacity: 1; /* Gradually fade in the nav-link elements */
+  }
+  .typing-text h1 {
+    width: 100% !important;
+    font-family: Arial;
+    font-weight: bolder;
+    overflow: hidden; /* Hide overflow text */
+    border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
+    animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+  }
+}
+.typing-text h1 {
+  width: 75%;
+  font-family: Arial;
+  font-weight: bolder;
+  overflow: hidden; /* Hide overflow text */
+  border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
+  animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+    height: 40px;
+  }
+  to {
+    width: 100%;
+    height: 40px;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(219, 45, 45);
+  }
+}
+h5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+.BODY {
+  /* background-color: rgba(113, 153, 194, 0.281); */
+  background: linear-gradient(to left, rgba(0, 5, 12, 0.918), rgb(0, 5, 12));
+  position: relative;
+}
+
+/* Add this CSS inside the head of your HTML or in a separate CSS file */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  td {
+    text-align: left;
+  }
+}
+th {
+  background-color: rgba(128, 128, 128, 0.432);
+}
+
+td {
+  color: grey;
+  text-align: center;
+}
+.textPara {
+  color: rgb(128, 128, 128);
+}
+.card-body {
+  background-color: rgba(0, 5, 12, 0.918);
+}
+.card {
+  border: none;
+  box-shadow: 10px 10px 10px rgba(0, 5, 12, 0.918);
+}
+.card-text {
+  color: grey;
+}
+.card-icon {
+  background-color: rgba(0, 5, 12, 0.918);
+}
+.cardHt:hover {
+  box-shadow: 0px 0px 10px rgba(255, 123, 0, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardJ:hover {
+  box-shadow: 0px 0px 10px rgba(255, 238, 0, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardC:hover {
+  box-shadow: 0px 0px 10px rgba(2, 154, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardR:hover {
+  box-shadow: 0px 0px 10px rgba(0, 247, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardNext:hover {
+  box-shadow: 0px 0px 10px rgba(0, 247, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardS:hover {
+  box-shadow: 0px 0px 10px rgba(255, 131, 234, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardB:hover {
+  box-shadow: 0px 0px 10px rgba(234, 0, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardG:hover {
+  box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardA:hover {
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardH:hover {
+  box-shadow: 0px 0px 10px rgba(64, 63, 129, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardD:hover {
+  box-shadow: 0px 0px 10px rgba(21, 177, 0, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardN:hover {
+  box-shadow: 0px 0px 10px rgba(87, 255, 64, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardJQ:hover {
+  box-shadow: 0px 0px 10px rgba(0, 76, 121, 0.918);
+  transition: box-shadow 0.5s;
+}
+/* cards css */
+/* This pen */
+body {
+  /* font-family: "Baloo 2", cursive; */
+  text-rendering: optimizeLegibility;
+  font-weight: initial;
+}
+
+.dark {
+  background: linear-gradient(to left, rgba(0, 5, 12, 0.918), rgb(0, 5, 12));
+}
+
+.light {
+  background: #f3f5f7;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+#pageHeaderTitle {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #bdbbbb;
+}
+
+/* Cards */
+
+.postcard {
+  flex-wrap: wrap;
+  display: flex;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+  margin: 0 0 2rem 0;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+
+  &.dark {
+    background-color: #18151f;
+  }
+  &.light {
+    background-color: #e1e5ea;
+  }
+
+  .t-dark {
+    color: #18151f;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  h1,
+  .h1 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .small {
+    font-size: 80%;
+  }
+
+  .postcard__title {
+    font-size: 1.75rem;
+  }
+
+  .postcard__img {
+    max-height: 180px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+
+  .postcard__img_link {
+    display: contents;
+  }
+
+  .postcard__bar {
+    width: 50px;
+    height: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #424242;
+    transition: width 0.2s ease;
+  }
+
+  .postcard__text {
+    background-color: rgba(128, 128, 128, 0.096);
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .postcard__preview-txt {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+    height: 100%;
+  }
+
+  .postcard__tagbox {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    margin: 20px 0 0 0;
+    padding: 0;
+    justify-content: center;
+
+    .tag__item {
+      display: inline-block;
+      background: rgba(83, 83, 83, 0.4);
+      border-radius: 3px;
+      padding: 2.5px 10px;
+      margin: 0 5px 5px 0;
+      cursor: default;
+      user-select: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: rgba(83, 83, 83, 0.8);
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(-70deg, #424242, transparent 50%);
+    opacity: 1;
+    border-radius: 10px;
+  }
+
+  &:hover .postcard__bar {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .postcard {
+    flex-wrap: inherit;
+
+    .postcard__title {
+      font-size: 2rem;
+    }
+
+    .postcard__tagbox {
+      justify-content: start;
+    }
+
+    .postcard__img {
+      max-width: 300px;
+      max-height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .postcard__text {
+      padding: 3rem;
+      width: 100%;
+    }
+
+    .media.postcard__text:before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #18151f;
+      top: -20%;
+      height: 130%;
+      width: 55px;
+    }
+
+    &:hover .postcard__img {
+      transform: scale(1.1);
+    }
+
+    &:nth-child(2n + 1) {
+      flex-direction: row;
+    }
+
+    &:nth-child(2n + 0) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-child(2n + 1) .postcard__text::before {
+      left: -12px !important;
+      transform: rotate(4deg);
+    }
+
+    &:nth-child(2n + 0) .postcard__text::before {
+      right: -12px !important;
+      transform: rotate(-4deg);
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .postcard__text {
+    padding: 2rem 3.5rem;
+  }
+
+  .postcard__text:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -1%;
+    height: 102%;
+    width: 55px;
+  }
+
+  .postcard.dark {
+    .postcard__text:before {
+      background: #02070e;
+    }
+  }
+  .postcard.light {
+    .postcard__text:before {
+      background: #e1e5ea;
+    }
+  }
+}
+
+/* COLORS */
+.postcard .postcard__tagbox .green.play:hover {
+  background: green;
+  color: black;
+}
+.green .postcard__title:hover {
+  color: rgb(109 33 57);
+}
+.green .postcard__bar {
+  background-color: rgb(109 33 57);
+}
+.green::before {
+  background-image: linear-gradient(-30deg, green-rgb-015, transparent 50%);
+}
+.green:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, green-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .blue.play:hover {
+  background: blue;
+}
+.blue .postcard__title:hover {
+  color: rgb(151 190 207);
+}
+.blue .postcard__bar {
+  background-color: rgb(151 190 207);
+}
+.blue::before {
+  background-image: linear-gradient(-30deg, blue-rgb-015, transparent 50%);
+}
+.blue:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, blue-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .red.play:hover {
+  background: red;
+}
+.red .postcard__title:hover {
+  color: rgb(255, 0, 128);
+}
+.red .postcard__bar {
+  background-color: rgb(255, 0, 128);
+}
+.red::before {
+  background-image: linear-gradient(-30deg, red-rgb-015, transparent 50%);
+}
+.red:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, red-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .yellow.play:hover {
+  background: yellow;
+  color: black;
+}
+.yellow .postcard__title:hover {
+  color: rgb(0, 255, 0);
+}
+.yellow .postcard__bar {
+  background-color: rgb(0, 255, 0);
+}
+.yellow::before {
+  background-image: linear-gradient(-30deg, yellow-rgb-015, transparent 50%);
+}
+.yellow:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, yellow-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .white.play:hover {
+  background: yellow;
+  color: black;
+}
+.white .postcard__title:hover {
+  color: rgb(109, 109, 109);
+}
+.white .postcard__bar {
+  background-color: rgb(249, 252, 249);
+}
+.white::before {
+  background-image: linear-gradient(-30deg, yellow-rgb-015, transparent 50%);
+}
+.white:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, yellow-rgb-015, transparent 50%);
+}
+
+.postcard .postcard__tagbox .orange.play:hover {
+  background: yellow;
+  color: black;
+}
+.orange .postcard__title:hover {
+  color: rgb(217 160 47);
+}
+.orange .postcard__bar {
+  background-color: rgb(217 160 47);
+}
+.orange::before {
+  background-image: linear-gradient(-30deg, yellow-rgb-015, transparent 50%);
+}
+.orange:nth-child(2n)::before {
+  background-image: linear-gradient(30deg, yellow-rgb-015, transparent 50%);
+}
+
+@media screen and (min-width: 769px) {
+  .green::before {
+    background-image: linear-gradient(-80deg, green-rgb-015, transparent 50%);
+  }
+  .green:nth-child(2n)::before {
+    background-image: linear-gradient(80deg, green-rgb-015, transparent 50%);
+  }
+
+  .blue::before {
+    background-image: linear-gradient(-80deg, blue-rgb-015, transparent 50%);
+  }
+  .blue:nth-child(2n)::before {
+    background-image: linear-gradient(80deg, blue-rgb-015, transparent 50%);
+  }
+
+  .red::before {
+    background-image: linear-gradient(-80deg, red-rgb-015, transparent 50%);
+  }
+  .red:nth-child(2n)::before {
+    background-image: linear-gradient(80deg, red-rgb-015, transparent 50%);
+  }
+
+  .yellow::before {
+    background-image: linear-gradient(-80deg, yellow-rgb-015, transparent 50%);
+  }
+  .yellow:nth-child(2n)::before {
+    background-image: linear-gradient(80deg, yellow-rgb-015, transparent 50%);
+  }
+}
+
+@keyframes myAnimation {
+  from {
+    right: -400px;
+    opacity: 0.5;
+    filter: "brightness(0.5)";
+  }
+  to {
+    right: -100px;
+    opacity: 1;
+    filter: "brightness(1)";
+  }
+}
+
+/* The element to apply the animation to */
+.img-animation {
+  position: relative;
+  right: -100px;
+  animation-name: myAnimation;
+  animation-duration: 4s;
 }
