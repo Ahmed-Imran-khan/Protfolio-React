@@ -310,7 +310,7 @@ function Contact() {
                     href="http://dev.kodextech.com:3029/admin/signin"
                     target="blank"
                   >
-                    PROJECT 7
+                    PROJECT 8
                   </a>
                 </h1>
                 <div class="postcard__subtitle small">

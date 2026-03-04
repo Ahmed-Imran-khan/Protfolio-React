@@ -5,13 +5,29 @@
 .App {
   text-align: center;
 }
-.bg{
+.bg {
   background-color: #151a20;
 }
-.landing-bg{
-  background-image: url('../public/images/ahmed.png');
+.landing-bg {
+  background-image: url("../public/images/ahmed.png");
   background-size: cover;
   background-position: 100% 0%;
+}
+@media (max-width: 1140px) {
+  .landing-bg {
+    background-position: 80% 0%;
+  }
+}
+@media (max-width: 768px) {
+  .landing-bg {
+    background-position: 70% 0%;
+  }
+}
+@media (max-width: 559px) {
+  .landing-bg {
+    background-image: none;
+    background-color: #151a20;
+  }
 }
 .App-logo {
   height: 40vmin;
@@ -106,7 +122,9 @@
   .BUTTONCV {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 2s, opacity 2s;
+    transition:
+      visibility 2s,
+      opacity 2s;
     height: 30px;
     border-style: none;
     margin-top: 13px;
@@ -129,7 +147,9 @@
   .nav-link {
     visibility: hidden; /* Hide the nav-link elements in the navbar */
     opacity: 0; /* Hide with zero opacity */
-    transition: visibility 2s, opacity 2s;
+    transition:
+      visibility 2s,
+      opacity 2s;
   }
   .Navbar:hover .nav-link {
     visibility: visible; /* Make the nav-link elements visible when navbar is hovered */
@@ -145,7 +165,9 @@
     font-weight: bolder;
     overflow: hidden; /* Hide overflow text */
     border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
-    animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation:
+      typing 10s steps(40, end),
+      blink-caret 0.75s step-end infinite;
   }
 }
 .typing-text h1 {
@@ -154,7 +176,9 @@
   font-weight: bolder;
   overflow: hidden; /* Hide overflow text */
   border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
-  animation: typing 10s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation:
+    typing 10s steps(40, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -204,7 +228,7 @@ h5 {
   }
 }
 th {
-  background-color: rgba(128, 128, 128, 0.432);
+  background-color: rgba(128, 128, 128, 0.686);
 }
 
 td {
@@ -212,7 +236,8 @@ td {
   text-align: center;
 }
 .textPara {
-  color: rgb(128, 128, 128);
+  color: rgb(201, 198, 198);
+  font-weight: 500;
 }
 .card-body {
   background-color: rgba(0, 5, 12, 0.918);
@@ -310,7 +335,8 @@ a:hover {
   text-transform: uppercase;
   text-align: center;
   font-size: 2.5rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #bdbbbb;
 }
