@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "ahmedimrankhan-5d717",
-    "staging": "ahmedimrankhan-5d717"
+    "staging": "ahmedimrankhan-5d717",
+    "y": "ahmedimrankhan-5d717"
   },
   "targets": {},
   "etags": {}
