@@ -8,7 +8,7 @@ function Services() {
       <Navbar />
       <div className="BODY position-absolute" style={{ zIndex: "-1" }}>
         <div className="d-flex flex-wrap justify-content-around">
-          <div className="card m-5 card1 cardHt" style={{ width: "12rem" }}>
+          <div className="card m-5 cardHt" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-html5 text-center card-icon"
               style={{ fontSize: "200px", color: "#ff5b00" }}
@@ -21,7 +21,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardJ" style={{ width: "12rem" }}>
+          <div className="card m-5  cardJ" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-js text-center card-icon"
               style={{ fontSize: "200px", color: "yellow" }}
@@ -34,7 +34,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardC" style={{ width: "12rem" }}>
+          <div className="card m-5  cardC" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-css3-alt text-center card-icon"
               style={{ fontSize: "200px", color: "#347efa" }}
@@ -47,7 +47,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardR" style={{ width: "12rem" }}>
+          <div className="card m-5  cardR" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-react text-center card-icon"
               style={{ fontSize: "180px", color: "lightblue" }}
@@ -61,7 +61,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardNext" style={{ width: "12rem" }}>
+          <div className="card m-5  cardNext" style={{ width: "12rem" }}>
             <img
               src="./images/nextjs.png"
               className="card-img-top"
@@ -79,7 +79,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="card m-5  card1 cardS"
+            className="card m-5  cardS"
             style={{ width: "12rem", overflow: "hidden" }}
           >
             <i
@@ -95,7 +95,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="card m-5  card1 cardS"
+            className="card m-5  cardS"
             style={{ width: "12rem", overflow: "hidden" }}
           >
             <img
@@ -113,7 +113,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardB" style={{ width: "12rem" }}>
+          <div className="card m-5  cardB" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-bootstrap text-center card-icon"
               style={{ fontSize: "170px", color: "purple" }}
@@ -126,7 +126,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardG" style={{ width: "12rem" }}>
+          <div className="card m-5  cardG" style={{ width: "12rem" }}>
             <i
               className="fa-brands fa-github text-center card-icon"
               style={{ fontSize: "180px", color: "black" }}
@@ -140,7 +140,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardA" style={{ width: "12rem" }}>
+          <div className="card m-5  cardA" style={{ width: "12rem" }}>
             <img src="./images/api.png" className="card-img-top" alt="..." />
             <div className="card-body">
               <p className="card-text">
@@ -150,7 +150,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardH" style={{ width: "12rem" }}>
+          <div className="card m-5  cardH" style={{ width: "12rem" }}>
             <i
               className="fa-solid fa-window-maximize text-center card-icon"
               style={{ fontSize: "180px", color: "#19b2ff" }}
@@ -165,7 +165,7 @@ function Services() {
               </p>
             </div>
           </div>
-          <div className="card m-5  card1 cardD" style={{ width: "12rem" }}>
+          <div className="card m-5  cardD" style={{ width: "12rem" }}>
             <i
               className="fa-solid fa-database text-center text-success card-icon"
               style={{ fontSize: "180px" }}
@@ -180,7 +180,7 @@ function Services() {
             </div>
           </div>
           <div
-            className="card m-5  card1 cardN"
+            className="card m-5  cardN"
             style={{ width: "12rem", overflow: "hidden" }}
           >
             <i
@@ -196,8 +196,16 @@ function Services() {
               </p>
             </div>
           </div>
+          <div className="card m-5 cardNest" style={{ width: "12rem" }}>
+            <img src="./images/nestjs.png" className="bg" alt="..." />
+            <div className="card-body">
+              <p className="card-text">
+                <b className="text-danger">NestJS</b> is progressive, server-side Node.js web framework for building efficient, scalable, and enterprise-grade applications using modern JavaScript and TypeScript. It provides an out-of-the-box application architecture inspired by Angular.
+              </p>
+            </div>
+          </div>
           <div
-            className="card m-5  card1 cardJQ"
+            className="card m-5  cardJQ"
             style={{ width: "12rem", overflow: "hidden" }}
           >
             <svg

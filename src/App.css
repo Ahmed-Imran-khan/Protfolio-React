@@ -5,7 +5,14 @@
 .App {
   text-align: center;
 }
-
+.bg{
+  background-color: #151a20;
+}
+.landing-bg{
+  background-image: url('../public/images/ahmed.png');
+  background-size: cover;
+  background-position: 100% 0%;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -246,6 +253,10 @@ td {
 }
 .cardB:hover {
   box-shadow: 0px 0px 10px rgba(234, 0, 255, 0.918);
+  transition: box-shadow 0.5s;
+}
+.cardNest:hover {
+  box-shadow: 0px 0px 10px #e0224e;
   transition: box-shadow 0.5s;
 }
 .cardG:hover {

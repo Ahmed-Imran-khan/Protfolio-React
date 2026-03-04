@@ -5,11 +5,28 @@ import FirstPage from "./components/FirstPage";
 import CV from "./components/CV";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
+import { useState, useEffect } from "react";
+import Loader from "./components/Loader";
+
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<FirstPage/>} />
+        <Route path="/" element={<FirstPage />} />
         <Route path="/CV" element={<CV />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/Projects" element={<Projects />} />
@@ -17,6 +34,6 @@ function App() {
       </Routes>
     </Router>
   );
-} 
+}
 
 export default App;
