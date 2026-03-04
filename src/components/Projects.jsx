@@ -218,11 +218,7 @@ function Contact() {
               </div>
             </article>
             <article class="postcard dark white">
-              <a
-                class="postcard__img_link"
-                href="https://khan-medical-store-4b988.web.app/"
-                target="blank"
-              >
+              <a class="postcard__img_link">
                 <img
                   class="postcard__img"
                   src="../images/psd6.jpeg"
@@ -231,7 +227,12 @@ function Contact() {
               </a>
               <div class="postcard__text">
                 <h1 class="postcard__title blue">
-                  <a href="#">PROJECT 6</a>
+                  <a
+                    href="https://khan-medical-store-4b988.web.app/"
+                    target="blank"
+                  >
+                    PROJECT 6
+                  </a>
                 </h1>
                 <div class="postcard__subtitle small">
                   <time datetime="2020-05-25 12:00:00">Aug 25th 2023</time>
@@ -262,7 +263,7 @@ function Contact() {
               <a class="postcard__img_link">
                 <img
                   class="postcard__img"
-                  src="../images/dash2.jpeg"
+                  src="../images/dash2.1.jpeg"
                   alt="Image Title"
                 />
               </a>
@@ -288,6 +289,94 @@ function Contact() {
                     <i class="fas fa-clock mr-2"></i>55 mins.
                   </li>
                   <li class="tag__item play yellow">
+                    <a href="#">
+                      <i class="fas fa-play mr-2"></i>Play Episode
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="postcard dark yellow">
+              <a class="postcard__img_link">
+                <img
+                  class="postcard__img"
+                  src="../images/doctor7-log (2).png"
+                  alt="Image Title"
+                />
+              </a>
+              <div class="postcard__text">
+                <h1 class="postcard__title yellow">
+                  <a
+                    href="http://dev.kodextech.com:3029/admin/signin"
+                    target="blank"
+                  >
+                    PROJECT 7
+                  </a>
+                </h1>
+                <div class="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">Jan 30th 2026</time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi, fugiat asperiores inventore beatae accusamus odit
+                  minima enim, commodi quia, doloribus eius! Ducimus nemo
+                  accusantium maiores velit corrupti tempora reiciendis
+                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
+                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
+                  quidem excepturi, illum quos!
+                </div>
+                <ul class="postcard__tagbox">
+                  <li class="tag__item">
+                    <i class="fas fa-clock mr-2"></i>55 mins.
+                  </li>
+                  <li class="tag__item play yellow">
+                    <a href="#">
+                      <i class="fas fa-play mr-2"></i>Play Episode
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="postcard dark red">
+              <a
+                class="postcard__img_link"
+                // href="https://e-com-psd.web.app/"
+                // target="blank"
+              >
+                <img
+                  class="postcard__img"
+                  src="../images/siluetai.png"
+                  alt="Image Title"
+                />
+              </a>
+              <div class="postcard__text">
+                <h1 class="postcard__title red">
+                  <a
+                    href="http://dev.kodextech.com:3007/dashboard"
+                    target="blank"
+                  >
+                    PROJECT 9
+                  </a>
+                </h1>
+                <div class="postcard__subtitle small">
+                  <time datetime="2020-05-25 12:00:00">DEC 1st 2025</time>
+                </div>
+                <div class="postcard__bar"></div>
+                <div class="postcard__preview-txt">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi, fugiat asperiores inventore beatae accusamus odit
+                  minima enim, commodi quia, doloribus eius! Ducimus nemo
+                  accusantium maiores velit corrupti tempora reiciendis
+                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
+                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
+                  quidem excepturi, illum quos!
+                </div>
+                <ul class="postcard__tagbox">
+                  <li class="tag__item">
+                    <i class="fas fa-clock mr-2"></i>55 mins.
+                  </li>
+                  <li class="tag__item play red">
                     <a href="#">
                       <i class="fas fa-play mr-2"></i>Play Episode
                     </a>

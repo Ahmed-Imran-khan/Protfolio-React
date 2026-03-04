@@ -35,12 +35,11 @@ function CV() {
             <td className="border  p-3">
               HTML / CSS
               <br />
-              JAVASCRIPT <br />
-              BOOTSTRAP / TAILWIND <br />
-              JQUREY <br />
-              REACT.JS / REDUX <br />
-              NEXT.JS <br />
-              Node.js / Express <br />
+              Javascript / Typescript / Jquery <br />
+              Bootstrap / Tailwind / SASS<br />
+              React.js / Next.js / Redux <br />
+              Node.js / Nest.js / Express <br />
+              Angular.js <br />
               SQL
             </td>
             <td className="border  p-3">
@@ -77,7 +76,7 @@ function CV() {
           <tr>
             <td className="border  p-4" colSpan={4}>
               <b className="text-light">
-                CYBER ZEUS FRONTEND WEB DEVELOPER( March 2024 - Feb 2025)
+                CYBER ZEUS | FRONTEND WEB DEVELOPER (March 2024 - Feb 2025)
               </b>
               <br />
               Responsibilities: Implementing responsive design tech to optimize
@@ -86,6 +85,25 @@ function CV() {
               mockups into intractive web interface. Integrated Charts & Graphs
               to display data. Participated in agile development processess,
               including planning, daily stand-ups, and retrospectives.
+            </td>
+          </tr>
+          <tr>
+            <td className="border  p-4" colSpan={4}>
+              <b className="text-light">
+                KODEX TECHNOLOGIES | NODE.JS DEVELOPER (NOV 2025 - CURRENT)
+              </b>
+              <br />
+              Responsibilities: "As a Node.js Developer at Kodex Tech, I
+              specialize in building scalable, high-performance backend systems
+              while maintaining a high degree of versatility across the frontend
+              stack. My core responsibilities involve architecting robust APIs
+              and server-side logic in Node.js, which I seamlessly integrate
+              with modern web architectures. I have a proven track record of
+              delivering SEO-friendly, performant user interfaces using Next.js,
+              and I recently spearheaded a project transition/development phase
+              in Angular.js. This cross-functional expertise allows me to bridge
+              the gap between complex data structures and intuitive user
+              experiences, ensuring end-to-end technical excellence.
             </td>
           </tr>
           <tr className="border  ">

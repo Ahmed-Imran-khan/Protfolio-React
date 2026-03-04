@@ -11,19 +11,19 @@ function Contact() {
         style={{ padding: "5% 10%", width: "100%" }}
       >
         <div className="row text-center" style={{ padding: "15% 0%" }}>
-          <a
-            href="https://www.facebook.com/ahmedkhaan21/"
-            className="col-sm-2 my-3"
-          >
+          <a href="" className="col-sm-2 my-3">
             <i
               className="fa-brands fa-facebook text-primary"
               style={{ fontSize: "100px" }}
             ></i>
           </a>
-          <a href="" className="col-sm-2 my-3">
+          <a
+            href="https://github.com/Ahmed-Imran-khan"
+            className="col-sm-2 my-3"
+          >
             <i
-              className="fa-brands fa-whatsapp"
-              style={{ fontSize: "100px", color: "green" }}
+              className="fa-brands fa-github"
+              style={{ fontSize: "100px", color: "white" }}
             ></i>
           </a>
           <a
@@ -41,10 +41,7 @@ function Contact() {
               style={{ fontSize: "100px", color: "red" }}
             ></i>
           </a>
-          <a
-            href="https://www.instagram.com/ahmad.imran.khan/"
-            className="col-sm-2 my-3"
-          >
+          <a href="" className="col-sm-2 my-3">
             <i
               className="fa-brands fa-instagram"
               style={{ fontSize: "100px", color: "#ff2c52" }}
