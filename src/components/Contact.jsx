@@ -10,13 +10,13 @@ function Contact() {
         className="d-flex justify-content-center"
         style={{ padding: "5% 10%", width: "100%" }}
       >
-        <div className="row text-center" style={{ padding: "15% 0%" }}>
-          <a href="" className="col-sm-2 my-3">
+        <div className="row text-center" style={{ padding: "15% 0%", gap:"40px" }}>
+          {/* <a href="" className="col-sm-2 my-3">
             <i
               className="fa-brands fa-facebook text-primary"
               style={{ fontSize: "100px" }}
             ></i>
-          </a>
+          </a> */}
           <a
             href="https://github.com/Ahmed-Imran-khan"
             className="col-sm-2 my-3"
@@ -41,18 +41,18 @@ function Contact() {
               style={{ fontSize: "100px", color: "red" }}
             ></i>
           </a>
-          <a href="" className="col-sm-2 my-3">
+          {/* <a href="" className="col-sm-2 my-3">
             <i
               className="fa-brands fa-instagram"
               style={{ fontSize: "100px", color: "#ff2c52" }}
             ></i>
-          </a>
-          <a href="" className="col-sm-2 my-3">
+          </a> */}
+          {/* <a href="" className="col-sm-2 my-3">
             <i
               className="fa-brands fa-x-twitter"
               style={{ fontSize: "100px", color: "white" }}
             ></i>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
