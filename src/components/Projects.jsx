@@ -1,437 +1,172 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
 import "../App.css";
 
-function Contact() {
+const projects = [
+  {
+    id: 1,
+    name: "Project 1",
+    category: "Product",
+    date: "JAN 1st 2023",
+    image: "../images/emss.png",
+    link: "#",
+  },
+  {
+    id: 2,
+    name: "Project 2",
+    category: "websites",
+    date: "JAN 1st 2023",
+    image: "../images/travel.png",
+    link: "https://traveling-website-7ffb0.web.app/index.html",
+  },
+  {
+    id: 3,
+    name: "Project 3",
+    category: "websites",
+    date: "Jan 30th 2026",
+    image: "../images/doctor7.png",
+    link: "http://dev.kodextech.com:3029/admin/signin",
+  },
+  {
+    id: 4,
+    name: "Project 4",
+    category: "websites",
+    date: "Aug 25th 2023",
+    image: "../images/psd6.jpeg",
+    link: "https://kms-next.vercel.app/",
+  },
+  {
+    id: 5,
+    name: "Project 5",
+    category: "websites",
+    date: "DEC 1st 2025",
+    image: "../images/SILUETAII.png",
+    link: "http://dev.kodextech.com:3007/dashboard",
+  },
+  {
+    id: 6,
+    name: "Project 6",
+    category: "websites",
+    date: "JAN 1st 2023",
+    image: "../images/psd5.jpeg",
+    link: "https://islamic-web-react-2b32f.web.app/",
+  },
+  {
+    id: 7,
+    name: "Project 7",
+    category: "design",
+    date: "SEP 15th 2022",
+    image: "../images/apperls.jpg",
+    link: "https://two-core.vercel.app/",
+  },
+  {
+    id: 8,
+    name: "Project 8",
+    category: "design",
+    date: "SEP 15th 2022",
+    image: "../images/psd3.png",
+    link: "#",
+  },
+  {
+    id: 9,
+    name: "Project 9",
+    category: "design",
+    date: "NOV 13th 2022",
+    image: "../images/psd1.png",
+    link: "#",
+  },
+  {
+    id: 10,
+    name: "Project 10",
+    category: "design",
+    date: "DEC 20th 2022",
+    image: "../images/psd2.png",
+    link: "#",
+  },
+  {
+    id: 11,
+    name: "Project 11",
+    category: "design",
+    date: "July 30th 2022",
+    image: "../images/dash11.jpeg",
+    link: "#",
+  },
+  {
+    id: 12,
+    name: "Project 12",
+    category: "design",
+    date: "July 30th 2022",
+    image: "../images/dash2.1.jpeg",
+    link: "#",
+  },
+];
+
+const filters = ["all", "websites", "design", "Product"];
+
+function Projects() {
+  const [active, setActive] = useState("all");
+
+  const filtered =
+    active === "all" ? projects : projects.filter((p) => p.category === active);
+
   return (
     <div className="BODY">
       <Navbar />
-      <div>
-        <section class="dark bg-light">
-          <div class="container pb-4 pt-5">
-            <h1 class="h1 text-center" id="pageHeaderTitle">
-              PROJECTS
-            </h1>
-            <article class="postcard dark yellow">
-              <a class="postcard__img_link">
-                <img
-                  class="postcard__img"
-                  src="../images/dash2.1.jpeg"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title yellow">
-                  <a href="#">PROJECT 1</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">July 30th 2022</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play yellow">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark yellow">
-              <a class="postcard__img_link">
-                <img
-                  class="postcard__img"
-                  src="../images/doctor7-log (2).png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title yellow">
-                  <a
-                    href="http://dev.kodextech.com:3029/admin/signin"
-                    target="blank"
+      <section className="projects-section">
+        <div className="projects-header">
+          <span className="projects-label">Portfolio</span>
+          <h1 className="projects-title">PROJECTS</h1>
+        </div>
+
+        <div className="projects-filters">
+          {filters.map((f) => (
+            <button
+              key={f}
+              className={`filter-btn ${active === f ? "filter-btn--active" : ""}`}
+              onClick={() => setActive(f)}
+            >
+              {f.charAt(0).toUpperCase() + f.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        <div className="projects-grid">
+          {filtered.map((project) => (
+            <a
+              key={project.id}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="project-card"
+            >
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-card__img"
+              />
+              <div className="project-card__overlay">
+                <p className="project-card__name">{project.name}</p>
+                <p className="project-card__cat">{project.category}</p>
+                <p className="project-card__date">{project.date}</p>
+                <div className="project-card__icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
                   >
-                    PROJECT 2
-                  </a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">Jan 30th 2026</time>
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
                 </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play yellow">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
               </div>
-            </article>
-            <article class="postcard dark white">
-              <a class="postcard__img_link">
-                <img
-                  class="postcard__img"
-                  src="../images/psd6.jpeg"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title blue">
-                  <a href="https://kms-next.vercel.app/" target="blank">
-                    PROJECT 3
-                  </a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">Aug 25th 2023</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark red">
-              <a
-                class="postcard__img_link"
-                // href="https://e-com-psd.web.app/"
-                // target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/siluetai.png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title red">
-                  <a
-                    href="http://dev.kodextech.com:3007/dashboard"
-                    target="blank"
-                  >
-                    PROJECT 4
-                  </a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">DEC 1st 2025</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play red">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark yellow">
-              <a
-                class="postcard__img_link"
-                // href="https://psd1-59fbf.web.app/"
-                // target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/dash11.jpeg"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title yellow">
-                  <a href="#">PROJECT 5</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">July 30th 2022</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play yellow">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark green">
-              <a
-                class="postcard__img_link"
-                // href="https://psd2-502e2.web.app/"
-                // target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/psd3.png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title green">
-                  <a href="#">PROJECT 6</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">SEP 15th 2022</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play green">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark blue">
-              <a
-                class="postcard__img_link"
-                // href="https://psd3-dc899.web.app/"
-                // target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/psd1.png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title blue">
-                  <a href="#">PROJECT 7</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">NOV 13th 2022</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark red">
-              <a
-                class="postcard__img_link"
-                // href="https://e-com-psd.web.app/"
-                // target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/psd2.png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title red">
-                  <a href="#">PROJECT 8</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">DEC 20th 2022</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play red">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark orange">
-              <a
-                class="postcard__img_link"
-                href="https://islamic-web-react-2b32f.web.app/"
-                target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/psd5.jpeg"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title blue">
-                  <a href="https://islamic-web-react-2b32f.web.app/" target="blank">PROJECT 9</a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">JAN 1th 2023</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="postcard dark green">
-              <a
-                class="postcard__img_link"
-                href="https://newtab@traveling-website-7ffb0.web.app/index.html"
-                target="blank"
-              >
-                <img
-                  class="postcard__img"
-                  src="../images/travel.png"
-                  alt="Image Title"
-                />
-              </a>
-              <div class="postcard__text">
-                <h1 class="postcard__title blue">
-                  <a
-                    href="https://newtab@traveling-website-7ffb0.web.app/index.html"
-                    target="blank"
-                  >
-                    PROJECT 10
-                  </a>
-                </h1>
-                <div class="postcard__subtitle small">
-                  <time datetime="2020-05-25 12:00:00">JAN 1th 2023</time>
-                </div>
-                <div class="postcard__bar"></div>
-                <div class="postcard__preview-txt">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi, fugiat asperiores inventore beatae accusamus odit
-                  minima enim, commodi quia, doloribus eius! Ducimus nemo
-                  accusantium maiores velit corrupti tempora reiciendis
-                  molestiae repellat vero. Eveniet ipsam adipisci illo iusto
-                  quibusdam, sunt neque nulla unde ipsum dolores nobis enim
-                  quidem excepturi, illum quos!
-                </div>
-                <ul class="postcard__tagbox">
-                  <li class="tag__item">
-                    <i class="fas fa-clock mr-2"></i>55 mins.
-                  </li>
-                  <li class="tag__item play blue">
-                    <a href="#">
-                      <i class="fas fa-play mr-2"></i>Play Episode
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </article>
-          </div>
-        </section>
-      </div>
+            </a>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
 
-export default Contact;
+export default Projects;

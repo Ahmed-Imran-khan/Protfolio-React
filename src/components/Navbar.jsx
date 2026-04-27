@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const handleDownloadClick = () => {
-    const pdfUrl = "./images/Ahmed Imran.pdf";
+    const pdfUrl = "./images/AhmedImran.pdf";
     const downloadLink = document.createElement("a");
     downloadLink.href = pdfUrl;
     downloadLink.download = "AHMED IMRAN"; // Rename the downloaded file if needed
