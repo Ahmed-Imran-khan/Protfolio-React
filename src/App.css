@@ -163,41 +163,35 @@
     width: 100% !important;
     font-family: Arial;
     font-weight: bolder;
-    overflow: hidden; /* Hide overflow text */
-    border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
+    overflow: hidden;
+    border-right: 2px solid rgb(252, 251, 251);
     animation:
       typing 10s steps(40, end),
       blink-caret 0.75s step-end infinite;
   }
 }
-.typing-text h1 {
-  width: 75%;
-  font-family: Arial;
-  font-weight: bolder;
-  overflow: hidden; /* Hide overflow text */
-  border-right: 2px solid rgb(252, 251, 251); /* Add a blinking cursor effect */
-  animation:
-    typing 10s steps(40, end),
-    blink-caret 0.75s step-end infinite;
+
+.typewriter-heading {
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+  min-height: 50px;
 }
 
-@keyframes typing {
-  from {
-    width: 0%;
-    height: 40px;
-  }
-  to {
-    width: 100%;
-    height: 40px;
-  }
+.typewriter-cursor {
+  display: inline-block;
+  color: rgb(219, 45, 45);
+  font-weight: 400;
+  animation: blink-cursor 0.75s step-end infinite;
+  margin-left: 2px;
 }
-@keyframes blink-caret {
+
+@keyframes blink-cursor {
   from,
   to {
-    border-color: transparent;
+    opacity: 1;
   }
   50% {
-    border-color: rgb(219, 45, 45);
+    opacity: 0;
   }
 }
 h5 {
@@ -205,12 +199,10 @@ h5 {
   font-weight: lighter;
 }
 .BODY {
-  /* background-color: rgba(113, 153, 194, 0.281); */
   background: linear-gradient(to left, rgba(0, 5, 12, 0.918), rgb(0, 5, 12));
   position: relative;
 }
 
-/* Add this CSS inside the head of your HTML or in a separate CSS file */
 @media (max-width: 768px) {
   table {
     width: 100%;
@@ -424,13 +416,13 @@ a:hover {
 }
 
 .filter-btn:hover {
-  border-color:  rgb(255, 80, 80);
+  border-color: rgb(255, 80, 80);
   color: white;
 }
 
 .filter-btn--active {
-  background:  rgb(255, 80, 80);
-  border-color:  rgb(255, 80, 80);
+  background: rgb(255, 80, 80);
+  border-color: rgb(255, 80, 80);
   color: #fff;
 }
 
@@ -502,7 +494,7 @@ a:hover {
 .project-card__overlay {
   position: absolute;
   inset: 0;
-  background:  rgba(0, 0, 0, 0.507);
+  background: rgba(0, 0, 0, 0.507);
   display: flex;
   flex-direction: column;
   align-items: center;
