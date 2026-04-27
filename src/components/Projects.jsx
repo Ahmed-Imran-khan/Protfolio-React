@@ -105,7 +105,7 @@ const projects = [
     category: "website",
     date: "Feb 30th 2026",
     image: "../images/resturant.jpg",
-    link: "#",
+    link: "https://halal-restaurant-finder-three.vercel.app/",
   },
 ];
 
