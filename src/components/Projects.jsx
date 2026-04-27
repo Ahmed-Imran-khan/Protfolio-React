@@ -99,6 +99,14 @@ const projects = [
     image: "../images/dash2.1.jpeg",
     link: "#",
   },
+  {
+    id: 13,
+    name: "Project 13",
+    category: "website",
+    date: "Feb 30th 2026",
+    image: "../images/resturant.jpg",
+    link: "#",
+  },
 ];
 
 const filters = ["all", "websites", "design", "Product"];
